@@ -1,25 +1,16 @@
-var names = ["roberto","adalberto","pedro","tênia","bambí"]
-
-var guestName = document.getElementById("name1").ariaValueMax;
-names.push(guestName);
-
-names.sort();
-
-function searching()
+var namesOfPeople = [];
+    
+function submit()
 {
-    var s=document.getElementById("s1").value
+    var GuestName = document.getElementById("name1").value;
+	namesOfPeople.push(GuestName);
 
-    var found=0;
-    var j;
-
-    for(j=0; j<names.length; j++)
-    {
-        if(s==names[j]){
-            found=found+1
-        }
-    }
-    document.getElementById("p2").innerHTML = "nome encontrado"+found+"vez(es)";
-    console.log("nome encontrado"+found+ "vez(es)");
+	console.log(GuestName);
+        
+    console.log(namesOfPeople);
+    var lenghtOfName = namesOfPeople.length;
+    console.log(lenghtOfName);
+	document.getElementById("displayName").innerHTML=namesOfPeople.toString();
 }
 function submit()
 {

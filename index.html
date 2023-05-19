@@ -7,20 +7,34 @@
     <title>projeto80</title>
 </head>
 <body>
-   <h1>lista de convidados</h1> 
+   <center>
+      <h3 style="margin-top: 20px; margin-bottom: 20px; ">
+         Lista de Convidados
+      </h3>
+      
+      <div id="rows">      
 
+   <input type="text" placeholder="Incira o Nome" id="name1" /> 
    <button onclick="submit()" id="submitButton">
-	Enviar
-</button>
+      enviar
+   </button><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
-<button onclick="sort()" id="sortButton">
-	oranizar
-</button>
+   <hr>
 
-   <input type="text" name="Nome" size="40" id="caixaDeTexto" /> 
+   <div id="displayName">
+   </div>
+   <hr>
+       <div id="show1">
+         <h3 id="hd1">Lista de Convidados</h3>
+         <button onclick="show()" id="show">Mostrar</button>
+         <p id="p1"></p></div>
 
-   <div id="div"></div>
-   <div id="semDiv"></div>
+   <hr>
+   <button onclick="sorting()" id="sortButton">
+      lista Organizada
+   </button>
+       <div id="sorted"></div>
+       </div>
 
 </body>
 </html>
