@@ -1,3 +1,4 @@
+
 var namesOfPeople = [];
     
 function submit()
@@ -11,37 +12,36 @@ function submit()
     var lenghtOfName = namesOfPeople.length;
     console.log(lenghtOfName);
 	document.getElementById("displayName").innerHTML=namesOfPeople.toString();
-}
-function submit()
+	
+   }
+
+function sorting()
 {
-    nameOfNames = [];
-    var displayNames = [];
+	namesOfPeople.sort();
+	var i= namesOfPeople.join("<br>");
+    console.log(namesOfPeople);		
+	document.getElementById("sorted").innerHTML=i.toString();
+	}
 
-    for (var j = 1; j <= 4; j++)
-    {
-        var nameOfNames = document.getElementById("caixaDeTexto"+j).value;
-        console.log(names);
-        namesy.push(caixaDeTexto);
-    }
+function show()
+{
+	var i= namesOfPeople.join("<br>");
+	console.log(namesOfPeople);
+	document.getElementById("p1").innerHTML=i.toString();
+	document.getElementById("sortButton").style.display="block";
+	}
 
-    console.log(names);
-
-    var lenghtOfNames = names.lenght;
-    console.log(lenghtOfNames);
-
-    for  (var k = 0; k <lenghtOfNames; k++)
-    {
-        displayNames.push("<h4>Name - "+ names[k] + "</h4>");
-        console.log(displayNames);
-    }
-
-    console.log(displayNames);
-    document.getElementById("displayNameWithComes").innerHTML = displayStudentArray;
-
-    var removeComas = displayStudentArray.join("div");
-    console.log(removeCommas);
-    document.getElementById("semDiv").innerHTML = removeCommas;
-
-    document.getElementById("submitButton").style.display = "none";
-    doccument.getElementById("sortButton").style.display = "inline-block";
+function searching()
+{
+	var s= document.getElementById("s1").value;
+	var found=0;
+	var j;
+	for(j=0; j<namesOfPeople.length; j++)
+		{
+			if(s==namesOfPeople[j]){
+				found=found+1;
+			}	
+		}
+	document.getElementById("p2").innerHTML="Nome encontrado "+found+" vez(es)";
+	console.log("Nome encontrado "+found+" vez(es)");
 }
